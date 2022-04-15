@@ -81,7 +81,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
+      <strong>Jian_Song</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -240,12 +240,12 @@
             <h1 style="display: none">“Leetcode刷题回忆录”</h1>
             
             <div class="markdown-body">
-              <p>这里是正文</p>
-<span id="more"></span>
-
+              <p>这里是正文 <span id="more"></span></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><div class="code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></div></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>        unordered_map&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt; hashtable;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">if</span>(hashtable.<span class="hljs-built_in">count</span>(target-nums[i])) &#123;<br>                <span class="hljs-keyword">return</span> &#123;i, hashtable[target-nums[i]]&#125;;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                hashtable[nums[i]] = i;<br>            &#125;<br>        &#125;<br>        <br>        <span class="hljs-keyword">return</span> &#123;&#125;;<br><br>        <span class="hljs-comment">// unordered_map&lt;int, int&gt; hashtable;</span><br>        <span class="hljs-comment">// for (int i = 0; i &lt; nums.size(); ++i) &#123;</span><br>        <span class="hljs-comment">//     if(hashtable.count(target-nums[i])) &#123;</span><br>        <span class="hljs-comment">//         return &#123;hashtable[target-nums[i]], i&#125;;</span><br>        <span class="hljs-comment">//     &#125;else&#123;</span><br>        <span class="hljs-comment">//         hashtable[nums[i]] = i;</span><br>        <span class="hljs-comment">//     &#125;</span><br>        <span class="hljs-comment">// &#125;</span><br>        <span class="hljs-comment">// return &#123;&#125;;</span><br>    &#125;<br>&#125;;<br><br></code></pre></td></tr></table></figure>
+<p class="note note-primary">
+标签
+</p>
 
-<p class="note note-primary">标签</p>
             </div>
             <hr>
             <div>
@@ -416,6 +416,48 @@
 
 
 
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        loader: {
+          load: ['ui/lazy']
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" ></script>
+
+  
 
 
 
