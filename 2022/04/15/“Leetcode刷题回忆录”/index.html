@@ -232,12 +232,6 @@
             <!-- SEO header -->
             <h1 style="display: none">“Leetcode刷题回忆录”</h1>
             
-              <p class="note note-info">
-                
-                  本文最后更新于：2022年4月15日 下午
-                
-              </p>
-            
             <div class="markdown-body">
               <p>这里是正文 <span id="more"></span></p>
 <figure class="highlight c++"><table><tr><td class="gutter hljs"><div class="hljs code-wrapper"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></div></td><td class="code"><div class="hljs code-wrapper"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">twoSum</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums, <span class="hljs-type">int</span> target)</span> </span>&#123;<br>        unordered_map&lt;<span class="hljs-type">int</span>,<span class="hljs-type">int</span>&gt; hashtable;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            <span class="hljs-keyword">if</span>(hashtable.<span class="hljs-built_in">count</span>(target-nums[i])) &#123;<br>                <span class="hljs-keyword">return</span> &#123;i, hashtable[target-nums[i]]&#125;;<br>            &#125;<span class="hljs-keyword">else</span>&#123;<br>                hashtable[nums[i]] = i;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> &#123;&#125;;<br>    &#125;<br>&#125;;<br><br></code></pre></div></td></tr></table></figure>
